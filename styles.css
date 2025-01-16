@@ -1,0 +1,90 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: linear-gradient(to bottom, #ffffff, #e6e6e6); /* Gradient background */
+}
+
+header {
+  text-align: center;
+  padding: 15px; /* Reduced padding for cleaner look */
+  background-color: #f4f4f4;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Default menu-item styling for desktop */
+.menu-item {
+  width: 30%;
+  margin: 15px;
+  padding: 20px;
+  border: 1px solid black;
+  background-color: lightblue;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-sizing: border-box;
+}
+
+.menu-item h2 {
+  font-size: 2em; /* Larger font for better visibility */
+  color: #222; /* Darker for better contrast */
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 15px; /* More spacing below the title */
+}
+
+/* Hover effect for menu items */
+.menu-item:hover {
+  background-color: #f0f0f0; /* Subtle hover background */
+  transform: scale(1.01); /* Slight scale effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Softer shadow on hover */
+  transition: all 0.3s ease;
+}
+
+/* Tablet view (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .menu-item {
+    width: 45%; /* Two sections side by side */
+  }
+
+  .menu-item:nth-child(3) {
+    width: 100%; /* Third section full width */
+    margin: 10px auto;
+  }
+}
+
+/* Mobile view (767px and below) */
+@media (max-width: 767px) {
+  .menu-item {
+    width: 100%; /* Full width for each section */
+    margin-bottom: 20px; /* Extra spacing between sections */
+  }
+
+  header h1 {
+    font-size: 2em; /* Smaller font for mobile */
+  }
+
+  .menu-item h2 {
+    font-size: 1.5em; /* Smaller section title */
+  }
+}
+
+/* Custom background colors for each section */
+.menu-item:nth-child(1) {
+  background-color: #ffcccc; /* Light red for Chicken */
+}
+
+.menu-item:nth-child(2) {
+  background-color: #ccffcc; /* Light green for Beef */
+}
+
+.menu-item:nth-child(3) {
+  background-color: #ccccff; /* Light blue for Sushi */
+}
